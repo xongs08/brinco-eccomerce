@@ -4,7 +4,7 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import { ConnectDB } from './middlewares/ConnectDB'
-import { createUser } from './user/UserController'
+import { authorizeLogin, createUser } from './user/UserController'
 
 ConnectDB()
 
@@ -15,5 +15,6 @@ app.use(cors())
 
 //USER
 app.post("/api/user/create", createUser)
+app.post("/api/user/login", authorizeLogin)
 
 app.listen(3000, () => console.log("Server is now running!"))

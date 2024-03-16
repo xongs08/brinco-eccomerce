@@ -1,7 +1,7 @@
 USER
   CONTROLLERS
-    CREATE ACCOUNT
-      check if email alr registered
+    CREATE ACCOUNT 🆗
+      check if email alr registered 🆗
     AUTHORIZE LOGIN
     REMOVE ACCOUNT
 

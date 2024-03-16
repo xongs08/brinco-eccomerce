@@ -35,4 +35,28 @@ const createUser = asyncHandler(async (req, res) => {
   })
 })
 
-export {createUser}
+const authorizeLogin = asyncHandler(async (req, res) => {
+  const { auth, email, password } = req.body
+
+  isAdmin(auth).then(async authorized => {
+    switch (authorized) {
+      case true:
+        const userExists = await UserModel.findOne({ email: email, password: password })
+        if (userExists) {
+          res.send("Authorized").status(200)
+        } else {
+          res.send("Info doesn't match").status(500)
+        }
+        break
+
+      case false:
+        res.send("Você não tem permissão para fazer isso!").status(500)
+        break
+
+      default:
+        break
+    }
+  })
+})
+
+export { createUser, authorizeLogin }
