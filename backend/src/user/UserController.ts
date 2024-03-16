@@ -41,7 +41,7 @@ const authorizeLogin = asyncHandler(async (req, res) => {
   isAdmin(auth).then(async authorized => {
     switch (authorized) {
       case true:
-        const userExists = await UserModel.findOne({ email: email, password: password })
+        const userExists = await UserModel.findOne({ email: email, senha: password })
         if (userExists) {
           res.send("Authorized").status(200)
         } else {

@@ -3,7 +3,7 @@ dotenv.config()
 
 const password = process.env.ADMIN_AUTH
 
-fetch("http://localhost:3000/api/user/create", {
+fetch("http://localhost:3001/api/user/create", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
