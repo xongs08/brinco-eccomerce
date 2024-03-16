@@ -1,0 +1,14 @@
+USER
+  CONTROLLERS
+    CREATE ACCOUNT
+      check if email alr registered
+    AUTHORIZE LOGIN
+    REMOVE ACCOUNT
+
+PRODUCT
+  CONTROLLERS
+    CREATE PRODUCT
+      check if prod alr exists (code)
+    ATUALIZAR VENDAS DO PRODUTO (pra filtrar o mais vendido)
+    ATUALIZAR ESTOQUE
+    REMOVER PRODUTO
