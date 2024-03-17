@@ -3,7 +3,6 @@ USER
     CREATE ACCOUNT 🆗
       check if email alr registered 🆗
     AUTHORIZE LOGIN 🆗
-    REMOVE ACCOUNT
 
 PRODUCT
   CONTROLLERS

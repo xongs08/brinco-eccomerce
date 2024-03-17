@@ -17,4 +17,6 @@ app.use(cors())
 app.post("/api/user/create", createUser)
 app.post("/api/user/login", authorizeLogin)
 
+//PRODUCT
+
 app.listen(3001, () => console.log("Server is now running!"))
